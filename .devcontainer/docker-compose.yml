@@ -6,13 +6,13 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        VARIANT: 16-bullseye
+        VARIANT: 22-bullseye
     volumes:
       - ..:/workspace:cached
     command: sleep infinity
 
     network_mode: service:db
-  
+
   db:
     image: postgres:latest
     restart: unless-stopped
@@ -22,7 +22,6 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_USER: postgres
       POSTGRES_DB: postgres
-
     # Add "forwardPorts": ["5432"] to **devcontainer.json** to forward PostgreSQL locally.
     # (Adding the "ports" property to this file will not forward from a Codespace.)
 

@@ -8,4 +8,4 @@ app.use(cors());
 
 app.use("/api", apiRouter);
 
-app.listen(3000, () => console.log("http://localhost:3000/api"));
+app.listen(3000, () => console.log("http://localhost:3000"));
